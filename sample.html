@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     var mk=[a,b,c,d];
+     var gt=[];
+
+     gt.push(mk);
+     console.log(gt);
+
+     var fruits={firstname:"Murali"}
+     var veg={}; 
+     function krishna(){
+     veg.push(fruits.firstname);
+     }
+     console.log(krishna());
+
+     var data = [];
+// ...
+data[0] = { "ID": "1", "Status": "Valid" };
+data[1] = { "ID": "2", "Status": "Invalid" };
+// ...
+var tempData = [];
+for ( var index=0; index<data.length; index++ ) {
+    if ( data[index].Status == "Valid" ) {
+        tempData.push( data );
+    }
+}
+data = tempData;
+console.log(data);
+
+
+// Send data from One object to another object
+
+const target = { a: 1, c: 2 };
+const source = { b: 6, d: 5,c:1 };
+
+const returnedTarget = Object.assign(target, source);
+console.log(returnedTarget);
+
+
+let obj1={name:"murali"},obj2={id:102};
+let obj3; 
+obj3= Object.assign(obj1,obj2); 
+console.log(obj3);
+
+
+
+const person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+
+// using JSON
+let p3 = JSON.parse(JSON.stringify(person));
+
+
+// using spread ...
+let p1 = {
+    ...person
+};
+
+// using  Object.assign() method
+let p2 = Object.assign({}, person);
+
+
+    </script>
+
+    
+    
+</body>
+</html>
